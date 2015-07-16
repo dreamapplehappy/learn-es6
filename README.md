@@ -5,5 +5,5 @@
 + Object.freeze() //冻结对象
 
 ------
-+ ###let和const命令
-+ 
+###let和const命令
+###
