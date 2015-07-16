@@ -1,5 +1,9 @@
 学好ES6，走遍天下都不怕！
 
 + let
-+ constant
++ const
 + Object.freeze() //冻结对象
+
+------
++ ###let和const命令
++ 
