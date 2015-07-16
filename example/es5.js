@@ -1,15 +1,7 @@
 "use strict";
 
-var a = [];
-
-var _loop = function (_i) {
-	a[_i] = function () {
-		console.log(_i);
-	};
-};
-
-for (var _i = 0; _i < 10; _i++) {
-	_loop(_i);
+if (1) {
+	typeof _x;
+	console.log(typeof _x);
+	var _x = 2;
 }
-a[6]();
-console.log(i);
