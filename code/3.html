@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<style type="text/css">
+.new-vip-register-form{
+    font-family: 'Open Sans Condensed', arial, sans;
+    width: 500px;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+.new-vip-register-form h2{
+    background: #4D4D4D;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #797979;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 20px;
+    margin: -30px -30px 30px -30px;
+}
+.new-vip-register-form input[type="text"],
+.new-vip-register-form input[type="date"],
+.new-vip-register-form input[type="datetime"],
+.new-vip-register-form input[type="email"],
+.new-vip-register-form input[type="number"],
+.new-vip-register-form input[type="search"],
+.new-vip-register-form input[type="time"],
+.new-vip-register-form input[type="url"],
+.new-vip-register-form input[type="password"],
+.new-vip-register-form textarea,
+.new-vip-register-form select 
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+}
+.new-vip-register-form textarea{
+    resize:none;
+    overflow: hidden;
+}
+.new-vip-register-form input[type="button"], 
+.new-vip-register-form input[type="submit"]{
+    -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    box-shadow: inset 0px 1px 0px 0px #45D6D6;
+    background-color: #2CBBBB;
+    border: 1px solid #27A0A0;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    padding: 8px 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.new-vip-register-form input[type="button"]:hover, 
+.new-vip-register-form input[type="submit"]:hover {
+    background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+    background-color:#34CACA;
+}
+</style></style>
+</head>
+<body>
+	<div class="new-vip-register-form">
+  <h2>Login to your account</h2>
+  <form>
+    <input type="text" name="field1" placeholder="Full Name" />
+    <input type="email" name="field2" placeholder="Email" />
+    <input type="url" name="field3" placeholder="Website" />
+    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+    <input type="button" value="Send Message" />
+  </form>
+</div>
+</body>
+</html>

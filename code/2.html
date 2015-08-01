@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdn.bootcss.com/angular.js/1.4.2/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="MyApp">
+    <div ng-controller="MyController">
+        <div ng-repeat="color in colors">
+            <label>
+                <span ng-bind="color.color"></span>
+                <input type="checkbox" ng-model="getColors[$index]" value="color" name="{{color.color}}">
+            </label>
+        </div>
+            {{getColors}}
+    </div>
+</div>
+<script type="text/javascript">
+	angular.module("MyApp", [])
+.controller("MyController", ["$scope", function($scope){
+    $scope.colors = [
+        {"id": 1, "color": "red"},
+        {"id": 2, "color": "blue"},
+        {"id": 3, "color": "yellow"}
+    ];
+    $scope.getColors = [];
+}])
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="chooseID">阿大声道</button>
+	<select id="select">
+		<option class="option" value="1">1</option>
+		<option class="option" value="2">2</option>
+		<option class="option" value="3">3</option>
+	</select>
+
+	<script>
+
+		var chooseID = document.getElementById("chooseID");
+		var select = document.getElementById("select");
+		var options = select.getElementsByTagName("option");
+		var chooseValue = null;
+
+		console.log(options);
+
+		select.style.display = "none";
+
+		function bindEvent(ele, eventName, func){
+			if(window.addEventListener){
+				ele.addEventListener(eventName, func);
+			}
+			else{
+				ele.attachEvent('on' + eventName, func);
+			}
+		}
+		
+		bindEvent(chooseID, "click", function(){
+			select.style.display = "block";
+		});
+
+
+		bindEvent(select, "click", function(){
+			chooseValue = select.value;
+			alert(chooseValue);
+		})
+
+		for(var i = 0; i < options, )
+
+
+		
+
+	</script>
+</body>
+</html>
