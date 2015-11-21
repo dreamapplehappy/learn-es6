@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<ul>
+    <li>
+        <pre>Function的__proto__属性是一个函数,其他的类型的数据的__proto__属性是一个object</pre>
+        <pre>对象的__proto__属性指向该对象的构造器的prototype对象</pre>
+        <pre>Function.prototype.__proto__ === Object.prototype  --> true</pre>
+    </li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    console.log(Function.prototype);
+
+    function Person(name){
+        this.name = name;
+    }
+
+    var p = new Person('dreamapple');
+
+    Person.prototype.sayHello = function(){
+        console.log('say hello to ' + this.name);
+    };
+
+    console.log(p.name);
+
+    console.log(p.__proto__ === Person.prototype);
+
+    console.log(Person.__proto__ === Function.prototype);
+
+    p.sayHello();
+
+    console.log(Person,1);
+    console.log(p,2);
+    console.log(Function,3);
+    console.log(Object,4);
+
+    console.log(typeof Function.prototype, Function.prototype.__proto__);
+    console.log(Object.__proto__ === Function.prototype);
+    console.log(Function.prototype, '函数的原型属性');
+    console.log(Function.prototype === Function.__proto__);
+
+    console.log(Function.prototype.__proto__ === Object.prototype, '函数的原型属性的原型是对象的原型');
+    console.log(Object.prototype.__proto__ === null);
+
+</script>
+</body>
+</html>
