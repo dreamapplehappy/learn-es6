@@ -155,3 +155,81 @@ console.log(...'length');
 
 // 5
 
+//  箭头函数
+
+let func = v => v + 1;
+console.log(func(1));
+
+let func1 = (x, y) => x + y;
+console.log(func1(2,3));
+
+let func2 = (x, y) => ({x: x, y: y});
+console.log(func2(2,3));
+
+var handler = {
+    id: "123456",
+
+    init: function() {
+        document.addEventListener("click",
+                event => this.doSomething(event.type), false);
+    },
+
+    doSomething: function(type) {
+        console.log("Handling " + type  + " for " + this.id);
+    }
+};
+
+function Timer () {
+    this.seconds = 0
+    setInterval(() => this.seconds++, 1000)
+    // setInterval(function(){
+    //   this.seconds++;
+    // },1000);
+}
+// var timer = new Timer()
+// console.log(timer);
+// setTimeout(() => {console.log(timer);
+// console.log(timer.seconds);}, 3100)
+
+// function foo() {
+//   console.log('args:', arguments);
+//   // setTimeout( (x,y) => {
+//   //     console.log("args:", arguments);
+//   // },100);
+// }
+
+// foo( 2, 4, 6, 8 );
+
+var x = 'dreamapple';
+function Person(){
+    this.x = 'happ';
+    // console.log(this.x);
+    setTimeout( () => console.log(this.x+'kl') ,1000)
+}
+
+var p = new Person();
+// console.log(p.x);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
