@@ -102,3 +102,42 @@ array10.fill(7,0,3);
 console.log(array10);
 
 // [].entries() [].keys() [].values()
+
+let array11 = new Array(6);
+array11.fill(9);
+console.log(array11);
+for(let item of array11.keys()){
+    array11[item] = 'item' + item;
+    console.log(array11[item],item);
+}
+
+for(let key of array11.keys()){
+    console.log(key);
+}
+
+for(let value of array11.values()){
+    console.log(value);
+}
+
+for(let item of array11.entries()){
+    console.log(item[0],'-->',item[1]);
+}
+
+// 属于ES7的范畴了 [].includes() 与字符串的''.includes()方法相似
+console.log([NaN].includes(NaN));
+
+// Map结构的has方法，是用来查找键名的，比如Map.prototype.has(key)、WeakMap.prototype.has(key)、Reflect.has(target, propertyKey)。
+// Set结构的has方法，是用来查找值的，比如Set.prototype.has(value)、WeakSet.prototype.has(value)。
+
+// ES6则是明确将空位转为undefined。
+console.log(Array.from([1,,2]));
+console.log(...[1,,2]);
+console.log([,1,2,,3].copyWithin(2,0,2));
+
+let arr = [, ,];
+for (let i of arr) {
+    console.log(1);
+}
+
+
+
