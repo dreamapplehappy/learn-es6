@@ -69,3 +69,37 @@ for(let item of arrayLike){
     console.log(item);
 }
 
+// 调用Iterator接口的场合
+
+let set = new Set().add(1).add(2).add(3);
+
+let [x,y] = set;
+
+console.log([x,y]);
+
+let [a,...b] = set;
+
+console.log([...b]);
+
+let generator = function* (){
+    yield 1,
+        yield* [2,3,4],
+        yield 5
+}
+
+let iterator = new generator();
+
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+
+
+let str = 'dreamapple';
+console.log(typeof str[Symbol.iterator]);
+let strIter = str[Symbol.iterator]();
+console.log(strIter.next());
+
+// 对于普通的对象，for...in循环可以遍历键名，for...of循环会报错。
